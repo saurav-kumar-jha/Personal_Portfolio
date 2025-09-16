@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, scale } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaLaptopCode, FaTools, FaProjectDiagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaLaptopCode, FaTools, FaProjectDiagram, FaInstagram } from "react-icons/fa";
 import { SiTailwindcss, SiPostgresql, SiSpringboot, SiFirebase, SiMongodb, SiReact, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
 import { MdComputer, MdDeveloperMode } from "react-icons/md";
 import { DiJava } from "react-icons/di";
@@ -90,18 +90,18 @@ export const Portfolio = () => {
                     {[{
                         title: "Resume Builder",
                         image: "/Home_resume.jpg",
-                        desc: "A resume building web app with AI integration.",
+                        desc: "Built a resume builder platform with React.js, allowing users to select templates, dynamically input details, and export resumes as PDFs. Emphasized real-time updates and responsive design.",
                         link: "https://resume-maker-five-omega.vercel.app"
                     }, {
-                        title: "Stationary E-commerce Website",
-                        image: "/stationary.JPG",
-                        desc: "A full-stack platform to connect shop and customers. Here you can buy stationary products.",
-                        link: "https://stationary-shop-sigma.vercel.app/"
+                        title: "Expense Tracker App",
+                        image: "/expense_trackaer.jpg",
+                        desc: "Developed a mobile expense tracker using React Native and Firebase. Implemented user authentication, transaction records, and dynamic charts for visual insights. Ensured offline data sync, performance optimization, and responsive UI across devices.",
+                        link: "https://expo.dev/accounts/skj1/projects/Expense-Tracker/builds/2739472c-ca65-4c85-9333-9d08bb06c5c9"
                     }, {
-                        title: "Blogging Webiste ",
-                        image: "/blog.JPG",
-                        desc: "User-friendly blog webiste where user can post, read other blog.",
-                        link: "https://blog2u.vercel.app/"
+                        title: "Signature Website ",
+                        image: "/sig_app.png",
+                        desc: "Designed a digital signature tool with smooth rendering and fast interactions using React.js. Allowed users to create, clear, and save signatures as PNG files.",
+                        link: " https://saurav-kumar-jha.github.io/signature-app/"
                     }].map((project, index) => (
                         <motion.div
                             key={index}
@@ -110,7 +110,7 @@ export const Portfolio = () => {
                         >
                             <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
                             <div className="p-4">
-                                <h4 className="text-2xl text-blue-400 font-semibold mb-2">{project.title}</h4>
+                                <a href={project.link} className="text-2xl text-blue-400 font-semibold mb-2">{project.title}</a>
                                 <p className="text-sm text-gray-300 mb-2">{project.desc}</p>
                                 <div className="text-right">
                                     <a href={project.link} target="_blank" className="text-blue-400 text-xl cursor-pointer hover:scale-110 " >→</a>
@@ -142,7 +142,6 @@ export const Portfolio = () => {
             <SkillsSection />
 
 
-
             {/* Contact Section */}
             <section id="contact" className="px-6 py-10 bg-[#0a0f1c] text-center">
                 <h3 className="text-3xl font-semibold text-blue-400 mb-6">Contact Me</h3>
@@ -156,6 +155,9 @@ export const Portfolio = () => {
                     </a>
                     <a href="mailto:sauravkrjha614@gmail.com">
                         <FaEnvelope className="hover:text-blue-400" />
+                    </a>
+                    <a href="https://www.instagram.com/_saurav__.1/">
+                        <FaInstagram className="hover:text-blue-400" />
                     </a>
                 </div>
             </section>
