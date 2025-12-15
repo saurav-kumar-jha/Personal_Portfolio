@@ -11,6 +11,30 @@ import { FiAlignJustify, FiX } from "react-icons/fi";
 
 export const Portfolio = () => {
     const [show, setshow] = useState(false)
+    const [isLess, setIsLess] = useState(false)
+    const projects = [
+    {
+        title: "Resume Builder",
+        image: "/Home_resume.jpg",
+        desc: "Built a resume builder platform with React.js, allowing users to select templates, dynamically input details, and export resumes as PDFs. Emphasized real-time updates and responsive design.",
+        link: "https://resume-maker-five-omega.vercel.app"
+    }, {
+        title: "Expense Tracker App",
+        image: "/expense_trackaer.jpg",
+        desc: "Developed a mobile expense tracker using React Native and Firebase. Implemented user authentication, transaction records, and dynamic charts for visual insights. Ensured offline data sync, performance optimization, and responsive UI across devices.",
+        link: "https://expo.dev/accounts/skj1/projects/Expense-Tracker/builds/2739472c-ca65-4c85-9333-9d08bb06c5c9"
+    }, {
+        title: "Signature Website ",
+        image: "/sig_app.png",
+        desc: "Designed a digital signature tool with smooth rendering and fast interactions using React.js. Allowed users to create, clear, and save signatures as PNG files.",
+        link: " https://saurav-kumar-jha.github.io/signature-app/"
+    },{
+        title: "Learning Management System (LMS)",
+        image: "/lms_webpage.png",
+        desc: "A frontend-focused Learning Management System that provides free courses for students. Users can search, filter, enroll in courses, watch lessons, manage wishlists, and authenticate securely. Built to support teachers and learners with a modern Udemy-like experience.",
+        link: "https://lms-eight-peach.vercel.app/",
+    }]
+    const visibleProject = isLess ? projects : projects.slice(0,3)
     useEffect(() => {
         document.title = "Saurav Kumar Jha | Full Stack Developer";
 
@@ -87,22 +111,7 @@ export const Portfolio = () => {
             <section id="projects" className="px-6 py-10 bg-[#121e36]">
                 <h3 className="text-3xl font-semibold text-blue-400 mb-6 flex items-center gap-3"><FaProjectDiagram /> Projects</h3>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6  px-4 py-2 w-4/5 mx-auto ">
-                    {[{
-                        title: "Resume Builder",
-                        image: "/Home_resume.jpg",
-                        desc: "Built a resume builder platform with React.js, allowing users to select templates, dynamically input details, and export resumes as PDFs. Emphasized real-time updates and responsive design.",
-                        link: "https://resume-maker-five-omega.vercel.app"
-                    }, {
-                        title: "Expense Tracker App",
-                        image: "/expense_trackaer.jpg",
-                        desc: "Developed a mobile expense tracker using React Native and Firebase. Implemented user authentication, transaction records, and dynamic charts for visual insights. Ensured offline data sync, performance optimization, and responsive UI across devices.",
-                        link: "https://expo.dev/accounts/skj1/projects/Expense-Tracker/builds/2739472c-ca65-4c85-9333-9d08bb06c5c9"
-                    }, {
-                        title: "Signature Website ",
-                        image: "/sig_app.png",
-                        desc: "Designed a digital signature tool with smooth rendering and fast interactions using React.js. Allowed users to create, clear, and save signatures as PNG files.",
-                        link: " https://saurav-kumar-jha.github.io/signature-app/"
-                    }].map((project, index) => (
+                    {visibleProject.map((project, index) => (
                         <motion.div
                             key={index}
                             className="bg-[#0a0f1c] border border-[#1f2c42] rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 transition duration-300 "
@@ -119,6 +128,18 @@ export const Portfolio = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* View More / View Less Button */}
+      {projects.length > 3 && (
+        <div className="text-center mt-8 cursor-pointer">
+          <button
+            onClick={() => setIsLess(!isLess)}
+            className="px-6 py-2 bg-blue-500 hover:bg-blue-600 cursor-pointer transition rounded-full text-white font-semibold"
+          >
+            {isLess ? "View Less" : "View More"}
+          </button>
+        </div>
+      )}
             </section>
 
             {/* About Section */}
@@ -156,7 +177,7 @@ export const Portfolio = () => {
                     <a href="mailto:sauravkrjha614@gmail.com">
                         <FaEnvelope className="hover:text-blue-400" />
                     </a>
-                    <a href="https://www.instagram.com/_saurav__.1/">
+                    <a href="https://www.instagram.com/__.saurav__.1/">
                         <FaInstagram className="hover:text-blue-400" />
                     </a>
                 </div>

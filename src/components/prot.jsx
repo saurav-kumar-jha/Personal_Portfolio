@@ -62,15 +62,17 @@ const Portfolio = () => {
 
   const projects = [
     {
+      id:1,
       title: "AI Resume Builder",
       image: "/api/placeholder/400/250",
       description: "Next-gen resume building platform with AI-powered suggestions and real-time preview.",
       technologies: ["React", "AI/ML", "Tailwind"],
-      link: "https://resume-maker-five-omega.vercel.app",
-      github: "#",
+      link: "https://resume-builder-skj.vercel.app/",
+      github: "https://github.com/saurav-kumar-jha/Resume_Builder",
       category: "Web App"
     },
     {
+      id:2,
       title: "Smart E-commerce Platform",
       image: "/api/placeholder/400/250", 
       description: "Full-stack e-commerce solution with advanced analytics and inventory management.",
@@ -80,6 +82,7 @@ const Portfolio = () => {
       category: "E-commerce"
     },
     {
+      id:3,
       title: "Modern Blogging Platform",
       image: "/api/placeholder/400/250",
       description: "Dynamic blogging platform with real-time collaboration and content management.",
@@ -87,7 +90,18 @@ const Portfolio = () => {
       link: "https://blog2u.vercel.app/",
       github: "#",
       category: "Content Management"
+    },
+    {
+      id:4,
+      title: "Learning Management System (LMS)",
+      image: "/api/placeholder/400/250",
+      description: "A frontend-focused Learning Management System that provides free courses for students. Users can search, filter, enroll in courses, watch lessons, manage wishlists, and authenticate securely. Built to support teachers and learners with a modern Udemy-like experience.",
+      technologies: ["React", "Tailwind CSS", "React Router", "Lucide Icons"],
+      link: "https://lms-eight-peach.vercel.app/",
+      github: "https://github.com/saurav-kumar-jha/LMS",
+      category: "Education/LMS"
     }
+    
   ];
 
   return (
@@ -457,8 +471,7 @@ const Portfolio = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
               Featured Projects
             </h2>
@@ -468,8 +481,8 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
-                key={project.title}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-green-500/5 backdrop-blur-sm border border-white/10 hover:border-green-400/50 transition-all duration-500"
+                key={project.id}
+                className="group relative  rounded-2xl bg-gradient-to-br from-white/5 to-green-500/5 backdrop-blur-sm border border-white/10 hover:border-green-400/50 transition-all duration-500"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
