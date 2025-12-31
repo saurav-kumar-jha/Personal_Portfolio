@@ -1,6 +1,6 @@
 <div align="center">
 
-# .PORTFOLIO
+# PORTFOLIO
 
 *Accelerate Your Vision with Seamless Portfolio Creation*
 
