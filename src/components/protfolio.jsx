@@ -17,7 +17,7 @@ export const Portfolio = () => {
             title: "Quizzy - Full Stack Quiz Application",
             image: "/quizzy.png",
             desc: "Developed a full-stack quiz management system using React.js and Spring Boot. Teachers can create quizzes, add questions, generate unique exam links, and evaluate student submissions. Implemented JWT-based authentication, role-based access control, automated result calculation, and teacher-specific data isolation with PostgreSQL. Built a responsive UI using Tailwind CSS and integrated frontend with secure REST APIs.",
-            link: "https://quiz-frontend-sandy-seven.vercel.app/"
+            link: "https://quizzy-omega-black.vercel.app/"
         },        
     {
         title: "Resume Builder",
