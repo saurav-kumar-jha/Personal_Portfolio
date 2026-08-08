@@ -14,33 +14,42 @@ export const Portfolio = () => {
     const [isLess, setIsLess] = useState(false)
     const projects = [
         {
+            title: "AI Interview Preparation Platform",
+          
+            image: "https://blog.wyspa.app/content/images/size/w1200/2025/04/Overcoming-Interview-Anxiety-with-AI-Tools-and-Techniques-1.jpg",
+          
+            desc: "Built an AI-powered interview preparation platform using React.js and Spring Boot that analyzes uploaded resumes and generates personalized interview questions based on the candidate's experience level and selected field. Implemented AI-driven answer evaluation with scores, detailed feedback, strengths, weaknesses, and improvement suggestions.",
+          
+            link: "https://github.com/saurav-kumar-jha/AI-Interview-Preparation"
+        },
+        {
             title: "Quizzy - Full Stack Quiz Application",
             image: "/quizzy.png",
             desc: "Developed a full-stack quiz management system using React.js and Spring Boot. Teachers can create quizzes, add questions, generate unique exam links, and evaluate student submissions. Implemented JWT-based authentication, role-based access control, automated result calculation, and teacher-specific data isolation with PostgreSQL. Built a responsive UI using Tailwind CSS and integrated frontend with secure REST APIs.",
             link: "https://quizzy-omega-black.vercel.app/"
-        },        
-    {
-        title: "Resume Builder",
-        image: "/Home_resume.jpg",
-        desc: "Built a resume builder platform with React.js, allowing users to select templates, dynamically input details, and export resumes as PDFs. Emphasized real-time updates and responsive design.",
-        link: "https://resume-maker-five-omega.vercel.app"
-    }, {
-        title: "Expense Tracker App",
-        image: "/expense_trackaer.jpg",
-        desc: "Developed a mobile expense tracker using React Native and Firebase. Implemented user authentication, transaction records, and dynamic charts for visual insights. Ensured offline data sync, performance optimization, and responsive UI across devices.",
-        link: "https://expo.dev/accounts/skj1/projects/Expense-Tracker/builds/2739472c-ca65-4c85-9333-9d08bb06c5c9"
-    }, {
-        title: "Signature Website ",
-        image: "/sig_app.png",
-        desc: "Designed a digital signature tool with smooth rendering and fast interactions using React.js. Allowed users to create, clear, and save signatures as PNG files.",
-        link: " https://saurav-kumar-jha.github.io/signature-app/"
-    },{
-        title: "Learning Management System (LMS)",
-        image: "/lms_webpage.png",
-        desc: "A frontend-focused Learning Management System that provides free courses for students. Users can search, filter, enroll in courses, watch lessons, manage wishlists, and authenticate securely. Built to support teachers and learners with a modern Udemy-like experience.",
-        link: "https://lms-eight-peach.vercel.app/",
-    }]
-    const visibleProject = isLess ? projects : projects.slice(0,3)
+        },
+        {
+            title: "Resume Builder",
+            image: "/Home_resume.jpg",
+            desc: "Built a resume builder platform with React.js, allowing users to select templates, dynamically input details, and export resumes as PDFs. Emphasized real-time updates and responsive design.",
+            link: "https://resume-maker-five-omega.vercel.app"
+        }, {
+            title: "Expense Tracker App",
+            image: "/expense_trackaer.jpg",
+            desc: "Developed a mobile expense tracker using React Native and Firebase. Implemented user authentication, transaction records, and dynamic charts for visual insights. Ensured offline data sync, performance optimization, and responsive UI across devices.",
+            link: "https://expo.dev/accounts/skj1/projects/Expense-Tracker/builds/2739472c-ca65-4c85-9333-9d08bb06c5c9"
+        }, {
+            title: "Signature Website ",
+            image: "/sig_app.png",
+            desc: "Designed a digital signature tool with smooth rendering and fast interactions using React.js. Allowed users to create, clear, and save signatures as PNG files.",
+            link: " https://saurav-kumar-jha.github.io/signature-app/"
+        }, {
+            title: "Learning Management System (LMS)",
+            image: "/lms_webpage.png",
+            desc: "A frontend-focused Learning Management System that provides free courses for students. Users can search, filter, enroll in courses, watch lessons, manage wishlists, and authenticate securely. Built to support teachers and learners with a modern Udemy-like experience.",
+            link: "https://lms-eight-peach.vercel.app/",
+        }]
+    const visibleProject = isLess ? projects : projects.slice(0, 3)
     useEffect(() => {
         document.title = "Saurav Kumar Jha | Full Stack Developer";
 
@@ -136,16 +145,16 @@ export const Portfolio = () => {
                 </div>
 
                 {/* View More / View Less Button */}
-      {projects.length > 3 && (
-        <div className="text-center mt-8 cursor-pointer">
-          <button
-            onClick={() => setIsLess(!isLess)}
-            className="px-6 py-2 bg-blue-500 hover:bg-blue-600 cursor-pointer transition rounded-full text-white font-semibold"
-          >
-            {isLess ? "View Less" : "View More"}
-          </button>
-        </div>
-      )}
+                {projects.length > 3 && (
+                    <div className="text-center mt-8 cursor-pointer">
+                        <button
+                            onClick={() => setIsLess(!isLess)}
+                            className="px-6 py-2 bg-blue-500 hover:bg-blue-600 cursor-pointer transition rounded-full text-white font-semibold"
+                        >
+                            {isLess ? "View Less" : "View More"}
+                        </button>
+                    </div>
+                )}
             </section>
 
             {/* About Section */}
