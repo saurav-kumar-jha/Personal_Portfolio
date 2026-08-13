@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, scale } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaLaptopCode, FaTools, FaProjectDiagram, FaInstagram } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql, SiSpringboot, SiFirebase, SiMongodb, SiReact, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
+import { SiTailwindcss, SiPostgresql, SiSpringboot, SiFirebase, SiMongodb, SiReact, SiHtml5, SiCss3, SiJavascript, SiLeetcode } from "react-icons/si";
 import { MdComputer, MdDeveloperMode } from "react-icons/md";
 import { DiJava } from "react-icons/di";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -189,10 +189,13 @@ export const Portfolio = () => {
                     <a href="https://linkedin.com/in/saurav-kumar-jha-76a773341" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className="hover:text-blue-400" />
                     </a>
+                    <a href="https://leetcode.com/u/SKJ1/" target="_blank" rel="noopener noreferrer">
+                        <SiLeetcode className="hover:text-yellow-400" />
+                    </a>
                     <a href="mailto:sauravkrjha614@gmail.com">
                         <FaEnvelope className="hover:text-blue-400" />
                     </a>
-                    <a href="https://www.instagram.com/__.saurav__.1/">
+                    <a href="https://www.instagram.com/sauravkrjha_/">
                         <FaInstagram className="hover:text-blue-400" />
                     </a>
                 </div>
